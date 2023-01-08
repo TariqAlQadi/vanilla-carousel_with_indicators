@@ -7,7 +7,6 @@ const dots = Array.from(dotsNav.children);
 
 // gives current width of 1st slide
 const slideWidth = slides[0].getBoundingClientRect().width;
-// console.log(slideWidth)
 
 //arrange the slides next to one another
 // slides[0].style.left = slideWidth * 0 + "px";
@@ -20,17 +19,20 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
+// Callback: slide movement
 const moveToSlide = (track, currentSlide, targetSlide) => {
   track.style.transform = "translateX(-" + targetSlide.style.left + ")";
   currentSlide.classList.remove("current-slide");
   targetSlide.classList.add("current-slide");
 };
 
+// Callback: dots color update
 const updateDots = (currentDot, targetDot) => {
   currentDot.classList.remove("current-slide");
   targetDot.classList.add("current-slide");
 };
 
+// Callback: hides arrows at the beginning and end of the track
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
   if (targetIndex === 0) {
     prevButton.classList.add("is-hidden");
@@ -72,7 +74,6 @@ nextButton.addEventListener("click", (event) => {
 });
 
 // when click nav indicator, move to that slide
-
 dotsNav.addEventListener("click", (event) => {
   //what indicator was clicked on?
   const targetDot = event.target.closest("button");
