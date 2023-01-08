@@ -6,7 +6,7 @@
 }
 
 .carousel__image {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
 }
@@ -15,12 +15,16 @@
   background: lightgreen;
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .carousel__track {
   padding: 0;
   margin: 0;
   list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
 }
 
 .carousel__slide {
@@ -64,8 +68,13 @@
   height: 15px;
   background: rgba(0, 0, 0, 0.3);
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .carousel__indicator.current-slide {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.is-hidden {
+  display: none;
 }

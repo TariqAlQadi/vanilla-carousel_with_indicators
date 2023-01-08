@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla Carousel with Indicators</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/carousel.js" defer></script>
   </head>
   <body>
     <div class="carousel">
-      <button class="carousel__button carousel__button--left"><img src="img/left.svg" alt="Click to slide to the left side"></button>
+      <button class="is-hidden carousel__button carousel__button--left">
+        <img src="img/left.svg" alt="Click to slide to the left side" />
       </button>
+
       <div class="carousel__track-container">
         <ul class="carousel__track">
-          <li class="carousel__slide">
-            <img class="carousel__image" src="img/slide-1.jpg" alt="Nature Slide #1" />
+          <li class="carousel__slide current-slide">
+            <img
+              class="carousel__image"
+              src="img/slide-1.jpg"
+              alt="Nature Slide #1"
+            />
           </li>
+
           <li class="carousel__slide">
-            <img class="carousel__image" src="img/slide-2.jpg" alt="Nature Slide #2" />
+            <img
+              class="carousel__image"
+              src="img/slide-2.jpg"
+              alt="Nature Slide #2"
+            />
           </li>
+
           <li class="carousel__slide">
-            <img class="carousel__image" src="img/slide-3.jpg" alt="Nature Slide #3" />
+            <img
+              class="carousel__image"
+              src="img/slide-3.jpg"
+              alt="Nature Slide #3"
+            />
           </li>
         </ul>
       </div>
-      <button class="carousel__button carousel__button--right"><img src="img/right.svg" alt="Click to slide to the right side"></button>
+
+      <button class="carousel__button carousel__button--right">
+        <img src="img/right.svg" alt="Click to slide to the right side" />
+      </button>
+
       <div class="carousel__nav">
-      <button class="carousel__indicator current-slide"></button>
-      <button class="carousel__indicator"></button>
-      <button class="carousel__indicator"></button>
+        <button class="carousel__indicator current-slide"></button>
+        <button class="carousel__indicator"></button>
+        <button class="carousel__indicator"></button>
       </div>
     </div>
   </body>
